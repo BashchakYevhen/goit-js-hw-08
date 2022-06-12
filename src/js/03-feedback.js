@@ -16,11 +16,12 @@ form.addEventListener("input", throttle(saveToStorage, 300));
 form.addEventListener('submit', formSubmit)
 
 chekFormStatus();
+
 function saveToStorage(e) {
     feed.name = name.value;
     feed.email = email.value;;
 localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feed))
-}
+};
 
 function formSubmit(e) {
     e.preventDefault();
