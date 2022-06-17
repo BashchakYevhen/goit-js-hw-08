@@ -26,7 +26,7 @@ localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feed))
 function formSubmit(e) {
     e.preventDefault();
     if (name.value === "" || email.value === "") {
-        alert("fill all fields")
+        alert("fill in all the fields")
     } else {console.log(feed);
     localStorage.removeItem(FEEDBACK_KEY);
     e.currentTarget.reset();}
