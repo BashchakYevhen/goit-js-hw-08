@@ -25,9 +25,11 @@ localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feed))
 
 function formSubmit(e) {
     e.preventDefault();
-    console.log(feed);
+    if (name.value === "" || email.value === "") {
+        alert("fill all fields")
+    } else {console.log(feed);
     localStorage.removeItem(FEEDBACK_KEY);
-    e.currentTarget.reset();
+    e.currentTarget.reset();}
 };
 function chekFormStatus() {
     if (localStorage.getItem(FEEDBACK_KEY)) {
